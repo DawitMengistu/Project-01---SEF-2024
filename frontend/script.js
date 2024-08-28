@@ -1,5 +1,7 @@
 let books = document.querySelectorAll(".single-book")
 const bookCon = document.querySelector(".book-collection-con")
+const bookDisImg = document.querySelector(".book-img-dis")
+let bookLists;
 
 getBookLists();
 
@@ -8,6 +10,7 @@ function getBookLists() {
     fetch('http://localhost:3000/booklist')
         .then(response => response.json())
         .then(data => {
+            bookLists = data;
             renderBookList(data)
         })
         .catch(error => console.error(error));
@@ -36,7 +39,7 @@ function addEventListenerForBooks() {
 
     for (let i = 0; i < books.length; i++) {
         books[i].addEventListener("click", () => {
-            console.log(books[i].id)
+            bookDisImg.src = bookLists[i].src;
             openPanel()
         })
     }

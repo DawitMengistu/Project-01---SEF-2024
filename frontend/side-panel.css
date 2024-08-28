@@ -23,3 +23,31 @@
     top: 0;
     left: 0;
 }
+.side-panel-inner-con {
+   margin: 10px;
+}
+.book-discription-con {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.book-img-dis {
+    width: 100%;
+    background-color: gray;
+}
+
+.book-dis {
+    background-color: gray;
+}
+.method-con {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: 30px;
+}
+
+.payment-method-title {
+    font-size: 22px;
+    margin-inline: 10px;
+}
+.tele-birr-logo {
+    width: 70px;
+}
