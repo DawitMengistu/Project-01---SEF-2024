@@ -1,0 +1,16 @@
+
+
+.check-box-options p {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+}
+
+
+
+.check-box-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
