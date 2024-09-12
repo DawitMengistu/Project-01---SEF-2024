@@ -13,287 +13,24 @@ app.use(express.static('images'));
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+let users = [
+    {
+        user_name: "User One",
+        books: ["1", "2"]
+    }
+]
+
 let bookList = [
     {
         book_title: "book 1 title",
         book_discription: "book 1 title",
         book_price: "book 1 title",
         book_id: "1",
-        src: "http://localhost:3000/image_1.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_2.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_3.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_4.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_5.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_1.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_2.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_3.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_4.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_5.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_1.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_2.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_3.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_4.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_5.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_1.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_2.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_3.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_4.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_5.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_1.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_2.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_3.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_4.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_5.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_1.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_2.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_3.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_4.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_5.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_1.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_2.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_3.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_4.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_5.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_1.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_2.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_3.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_4.jpg"
-    },
-    {
-        book_title: "book 1 title",
-        book_discription: "book 1 title",
-        book_price: "book 1 title",
-        book_id: "1",
-        src: "http://localhost:3000/image_5.jpg"
-    },
+        src: "http://localhost:3000/image_1.jpg",
+        price: {
+            soft_copy: "499",
+        }
+    }
 ]
 
 
@@ -308,6 +45,14 @@ app.post('/', (req, res) => {
     res.json({ name: 'dawit' })
 });
 
+
+app.post("/confirm", (req, res) => {
+    console.log(req.body);
+
+    setTimeout(() => {
+        res.json({ message: "Book added to your library!" })
+    }, 2000);
+})
 
 app.get("/booklist", (req, res) => {
     res.json(bookList)

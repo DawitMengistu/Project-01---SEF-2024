@@ -43,7 +43,7 @@
 
             <div class="side-panel side-closed">
                 <div class="side-panel-inner-con">
-                    
+
                     <div class="book-discription-con">
                         <div class="book-img-con">
                             <img class="book-img-dis" src="http://localhost:3000/image_5.jpg" alt="">
@@ -58,38 +58,46 @@
                                 optio facilis perspiciatis dignissimos necessitatibus facere eum labore deserunt, amet
                                 cumque tempore excepturi dolores suscipit eos corrupti.
                             </div>
-
-                            <div class="book-price">
-                                299$
-                            </div>
                         </div>
                     </div>
 
                     <div class="check-box-options">
                         <div>
-                            <input type="checkbox" value="fruit-1" class="apple" />One Time Read</br>
+                            <input type="checkbox" value="digital" for="type" class="check box" checked/>Buy Digital Copy</br>
                         </div>
                         <div>
-                            <input type="checkbox" value="fruit-2" class="orange apple" />Audio Included</br>
+                            <input type="checkbox" value="hard" for="type" class="check-box" disabled/>Buy Hard Copy</br>
                         </div>
                         <div>
-                            <input type="checkbox" value="fruit-3" class="grapes apple" />Something here</br>
+                            <input type="checkbox" value="audio" class="check-box" disabled/>Include Audio</br>
                         </div>
-              
+
                     </div>
 
+                    <div class="book-price">
+                        <div class="total-text">Total</div>
+                        <div class="price"> 299 ETB </div>
+                    </div>
                     <div class="payment-detail-con">
                         <div class="method-con">
 
                             <div class="payment-method-title">
-                                Payment Method |
+                                Payment Method | to 0903035284 |
                             </div>
                             <div class="payment-method-img">
                                 <img class="tele-birr-logo" src="http://localhost:3000/telebirrlogo.png" alt="">
                             </div>
                         </div>
 
-
+                        <div class="payment-confirm-con">
+                            <input class="payment-input" type="text">
+                            <button class="confirm-btn">
+                                <div class="confirm-text">Confirm</div>
+                                <div class="loading-confirm hide">
+                                    <img src="./assets/loading.svg" class="loading-svg" alt="">
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,6 +111,7 @@
 
     <script src="script.js"></script>
     <script src="side-panel.js"></script>
+    <script src="confirm.js"></script>
 </body>
 
 </html>

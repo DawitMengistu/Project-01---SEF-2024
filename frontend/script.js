@@ -1,7 +1,12 @@
 let books = document.querySelectorAll(".single-book")
 const bookCon = document.querySelector(".book-collection-con")
 const bookDisImg = document.querySelector(".book-img-dis")
+
+const price = document.querySelector(".price")
+
 let bookLists;
+let bookID;
+
 
 getBookLists();
 
@@ -40,7 +45,9 @@ function addEventListenerForBooks() {
     for (let i = 0; i < books.length; i++) {
         books[i].addEventListener("click", () => {
             bookDisImg.src = bookLists[i].src;
-            openPanel()
+            bookID = bookLists[i].book_id;
+            openPanel();
+            price.innerText = bookLists[i].price.soft_copy + " ETB";
         })
     }
 }

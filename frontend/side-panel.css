@@ -36,18 +36,35 @@
 }
 
 .book-dis {
-    background-color: gray;
+    /* background-color: gray; */
+    margin-inline: 10px;
+}
+.book-price {
+    
+    margin-inline: 10px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    border: solid 2px gray;
+}
+
+.price {
+    font-weight: 600;
+    text-align: right;
 }
 .method-con {
     display: grid;
     grid-template-columns: auto 1fr;
     margin-top: 30px;
 }
-
+.payment-detail-con {
+    width: 100%;
+}
 .payment-method-title {
     font-size: 22px;
     margin-inline: 10px;
 }
 .tele-birr-logo {
-    width: 70px;
+    width: 50px;
 }

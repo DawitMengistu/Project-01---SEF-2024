@@ -1,16 +1,33 @@
-
-
-.check-box-options p {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    font-size: 18px;
-    padding: 20px;
-}
-
-
-
 .check-box-options {
+    margin-inline: 10px;
+    margin-top: 25px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+.payment-confirm-con {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    margin-top: 20px;
+    margin-inline: 10px;
+}
+.payment-input {
+    width: 80%;
+    padding-block: 6px;
+}
+
+.confirm-btn {
+    border-radius: 4px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+}
+.confirm-btn:hover {
+    cursor: pointer;
+    background-color: #3369c1;
+}
+.loading {
+    background-color: #496a9f;
+}
+.loading-svg {
+    width: 25px;
 }
