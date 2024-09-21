@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+}
+.nav-btn {
+    border-radius: 3px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    width: 100px;
+    height: 70%;
+    margin-block: auto;
+    border: solid var(--border-main) 2px;
+}
+
+.nav-btn:hover {
+    color: white;
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.focused {
+    background-color: var(--hover-color);
+    color: white;
+}

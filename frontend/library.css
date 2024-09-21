@@ -1,0 +1,24 @@
+.library-con {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    
+}
+.lib-tittle {
+    margin: 30px;
+}
+.single-course {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+}
+.video-dis {
+    display: grid;
+   grid-template-rows: auto 1fr;
+    margin-inline: 20px;
+}
+
+.vid-dis-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
